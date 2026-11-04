@@ -1,1 +1,1 @@
-"""SHAP-based explainable-AI package for the academic project."""
+"""Shared utilities package for later phases."""
