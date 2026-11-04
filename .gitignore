@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Virtual environment
+.venv/
+venv/
+
+# Flask
+instance/
+.flaskenv
+
+# Environment variables
+.env
+
+# Academic data and generated artifacts
+dataset/*
+!dataset/.gitkeep
+models/*
+!models/.gitkeep
+database/*.db
+database/*.sqlite
+database/*.sqlite3
+screenshots/*
+!screenshots/.gitkeep
+
+# IDE and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
