@@ -1,0 +1,84 @@
+# Explainable AI-Based Federated Hybrid Learning Model for Stroke Prediction
+
+An academic M.Tech dissertation implementation for stroke-risk prediction. It combines a CNN→RNN→LSTM hybrid model, simulated federated learning, SHAP explanations, dynamic risk assessment, personalized recommendations, Flask, SQLite, and a Bootstrap frontend.
+
+> This is an educational prototype. Its output is not a medical diagnosis and it must not be used as production clinical software.
+
+## Implemented dissertation features
+
+- Stroke prediction from the Kaggle healthcare stroke dataset
+- Missing-value handling, encoding, scaling, SMOTE, and train/test split
+- CNN→RNN→LSTM hybrid deep-learning architecture
+- Early stopping, checkpointing, and learning-rate reduction
+- Evaluation against Decision Tree, Random Forest, Logistic Regression, and SVM
+- Three-hospital federated-learning simulation with weighted aggregation
+- SHAP summary, bar, force, waterfall, and dependence explanations
+- Low, Medium, and High dynamic risk assessment
+- Personalized diet, exercise, doctor-visit, lifestyle, and medication reminders
+- Flask APIs, SQLite history, and responsive Bootstrap pages
+- Automated tests for the completed application workflow
+- Custom hospital letterhead, four report themes, logo/signature uploads, and local PDF export
+- Doctor remarks, recommended tests, follow-up reminders, prediction timeline, health score, and lifestyle-impact analysis
+
+## Quick start
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+python run.py
+```
+
+Open `http://127.0.0.1:5000`. Register a demonstration account, log in, and open the Prediction page.
+
+The required dataset file is:
+
+```text
+dataset/healthcare-dataset-stroke-data.csv
+```
+
+Official source: https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset
+
+## Main academic commands
+
+```powershell
+python -m utils.data_loader
+python -m utils.preprocessing
+python -m utils.eda
+python train.py
+python -m utils.evaluation
+python -m federated.server
+python -m xai.shap_explainer
+python -m tests.test_phase14
+python -m tests.test_phase16
+```
+
+Training and SHAP generation can take several minutes. The Flask application uses the already saved artifacts in `models/` and `reports/`.
+
+## Documentation
+
+- [Installation guide](docs/INSTALLATION_GUIDE.md)
+- [Requirements reference](docs/REQUIREMENTS.md)
+- [Folder structure](docs/FOLDER_STRUCTURE.md)
+- [Developer notes](docs/DEVELOPER_NOTES.md)
+- [User manual](docs/USER_MANUAL.md)
+- [Local deployment guide](docs/LOCAL_DEPLOYMENT_GUIDE.md)
+- [Viva notes](docs/VIVA_NOTES.md)
+- [Student guidance and explanation script](docs/STUDENT_GUIDANCE_SCRIPT.md)
+- [Student guidance and presentation script](docs/STUDENT_GUIDANCE_SCRIPT.md)
+- [Dissertation screenshot checklist](docs/SCREENSHOT_CHECKLIST.md)
+- [Final implementation verification](docs/FINAL_VERIFICATION.md)
+- [Phase 16 branding and PDF guide](docs/PHASE16_REPORT_GUIDE.md)
+- [Doctor decision-support guide](docs/DOCTOR_DECISION_SUPPORT.md)
+
+Generated metrics, plots, logs, and test evidence are stored in `reports/`. Screenshots captured manually for the dissertation should be placed in `screenshots/`.
+
+## Requirements
+
+- Python 3.11 recommended
+- Packages pinned in `requirements.txt`
+- A local web browser
+- No cloud deployment or real hospital communication is required
+
+## Scope limitation
+
+This implementation demonstrates an academic workflow on a public dataset. Federated learning is simulated locally by partitioning the data into Hospital A, Hospital B, and Hospital C. It does not implement networking between hospitals, clinical validation, security hardening, or production deployment.
